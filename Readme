@@ -1,0 +1,35 @@
+OUR SOFTWARE WILL DO THE FOLLOWING:
+1.create table
+	1.Key Constraint
+	2.Entity Integrity Constraint
+2.select col1,[col2,..] from mytab[,mytab2] where <condition>
+	In condition,LHS operand is an attribute and RHS attribute should be a constant(string or integer)
+3.insert into table_name values ('value1','value2',...)
+	During insertion,we check for key and entity integrity constraints
+4.delete from table_name where <condtion>
+	In condition,LHS operand is an attribute and RHS attribute should be a constant(string or integer)
+	
+	
+ASSUMPTIONS:
+PK - datatype is implicitly taken as string
+Only one condition in where clause
+
+CODE FLOW:
+1.Create:
+   1.create1 will be called when 'c' is seen as first character of string.
+   2.In this,table pointer is found 
+   3.Table pointer and remaining parameters are passed on to actual create function.
+
+2.Insert:
+   1.insert1 is called on seeing character 'i'
+   2.In this,table pointer is found
+   3.Table pointer and remaining parameters are passed on to actual insert function.
+
+3.Select:
+    1.select1 will be called when 's' is seen as first character of string.
+    2.Then pi1 is called,from that sigma1 is called and from that cross1 is called if two tables are given.
+    
+4.Delete:
+    1.delete1 is called on seeing character 'd'
+    2.Then satisfy function is called to find rows that satisfy given condition
+    3.Now delete function is called that actually deletes the satisfied rows.

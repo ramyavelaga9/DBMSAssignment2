@@ -1,0 +1,13 @@
+table Employee is created
+table Department is created
+A row is inserted
+sigma function is called
+pi function is called
+A row is inserted
+sigma function is called
+pi function is called
+A row is inserted
+A row is inserted
+sigma function is called
+pi function is called
+1rows are deleted
