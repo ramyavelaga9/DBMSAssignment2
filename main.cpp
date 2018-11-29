@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 #include"dbms.h"
 using namespace std;
-int main()
+int main(int argc,char** argv)
 {
    ifstream f;
-   f.open("input.txt");
+   f.open(argv[1]);
    string str;
    while( getline(f, str))
    {
