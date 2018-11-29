@@ -1,7 +1,7 @@
 create Employee (eid(PK),ename, depno,sal(int), age(int))
 create Department (depname,mgr)
 insert into Employee values ('1','sgj','5','200000','20')
-select eid,ename from Employee
+select * from Employee
 insert into Employee values ('1','dcbdj','2','20000','10')
 select eid,ename from Employee
 insert into Department values ('jhwdghj','1')
